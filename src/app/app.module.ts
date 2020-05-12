@@ -1,18 +1,35 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
-import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+
+import { HeaderComponent } from './components/layout/header/header.component';
+import { CurrencyConversionComponent } from './components/currency-conversion/currency-conversion.component';
+import { LogoComponent } from './components/layout/logo.component';
 
 @NgModule({
+  bootstrap: [AppComponent],
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    CurrencyConversionComponent,
+    LogoComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    SharedModule,
+    AppRoutingModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    HttpClientModule,
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule { }
+export class AppModule {
+}

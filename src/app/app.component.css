@@ -1,0 +1,33 @@
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.container .mat-drawer {
+  min-width: 300px;
+}
+
+.mat-drawer-content {
+  height: auto;
+}
+
+a.logo {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container .mat-drawer .mat-button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+  font-size: 1.2em;
+}
+
+
+.sidenav-content {
+  padding: 15px;
+}

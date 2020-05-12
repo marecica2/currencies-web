@@ -1,0 +1,49 @@
+<form>
+  <mat-form-field>
+    <mat-label>From currency</mat-label>
+    <mat-select
+      (selectionChange)="calculate(direction.FROM)"
+      required
+      [(ngModel)]="from"
+      name="from"
+    >
+      <mat-option *ngFor="let currency of currencies" [value]="currency">
+        {{currency.type}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Amount</mat-label>
+    <input
+      matInput
+      (change)="calculate(direction.FROM)"
+      [(ngModel)]="fromAmount"
+      name="fromAmount"
+    >
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>To currency</mat-label>
+    <mat-select
+      (selectionChange)="calculate(direction.TO)"
+      required
+      [(ngModel)]="to"
+      name="to"
+    >
+      <mat-option *ngFor="let currency of currencies" [value]="currency">
+        {{currency.type}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Amount</mat-label>
+    <input
+      matInput
+      (change)="calculate(direction.TO)"
+      [(ngModel)]="toAmount"
+      name="toAmount"
+    >
+  </mat-form-field>
+</form>

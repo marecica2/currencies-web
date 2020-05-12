@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+body {
+  /*background-color: #fafafa;*/
+}
+
+.mat-drawer-content {
+  height: auto !important;
+}
+
+.mat-icon-large {
+  font-size: 24px;
+}
+
+mat-icon {
+  height: initial !important;
+  width: initial !important;
+  font-size: inherit;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+
+.aligned {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
